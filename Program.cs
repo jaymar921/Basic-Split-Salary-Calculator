@@ -36,6 +36,7 @@ static void calculateSplit(double salary, double split, double tax_percent)
     Console.WriteLine($"MONTHLY: {salary_net.ToString("C", peso)}/MO");
     Console.WriteLine($"BI-MONTHLY: {(salary_net/2).ToString("C", peso)}");
     Console.WriteLine($"YEARLY: {(salary_net * 12).ToString("C", peso)}");
+    Console.WriteLine($"13TH MONTH PAY: {(salary).ToString("C", peso)}");
     Console.WriteLine($"YEARLY + 13TH MONTH: {((salary_net * 12) + salary).ToString("C", peso)}");
     Console.WriteLine($"TAX: {((salary * (tax_percent / 100)) * 12).ToString("C",peso)}/YR");
     Console.WriteLine("\n=====================[SPLIT]=====================");
@@ -43,6 +44,7 @@ static void calculateSplit(double salary, double split, double tax_percent)
     Console.WriteLine($"MONTHLY: {(split_salary_net + split).ToString("C", peso)}/MO");
     Console.WriteLine($"BI-MONTHLY: {((split_salary_net + split) / 2).ToString("C", peso)}");
     Console.WriteLine($"YEARLY: {((split_salary_net + split) * 12).ToString("C", peso)}");
+    Console.WriteLine($"13TH MONTH PAY: {(salary - split).ToString("C", peso)}");
     Console.WriteLine($"YEARLY + 13TH MONTH: {(((split_salary_net + split) * 12) + salary - split).ToString("C", peso)}");
     Console.WriteLine($"TAX: {(((salary - split) * (tax_percent / 100)) * 12).ToString("C", peso)}/YR");
 
